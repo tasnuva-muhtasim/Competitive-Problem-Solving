@@ -1,0 +1,41 @@
+#include<stdio.h>
+int main()
+
+{
+    int test;
+    scanf("%d",&test);
+    while(test--)
+    {
+        int n,k=0,i=0,r;
+        scanf("%d",&n);
+        int words[n][n],t=n;
+        while(n--)
+        {
+            int a,b;
+            scanf("%d %d",&a,&b);
+            words[0][k]=a;
+            words[1][k]=b;
+            k++;
+        }
+
+        int greatest = -2;
+
+        // printf("test 1\n");
+
+        while(t--)
+        {
+            // printf("test 1\n");
+            if(words[1][i] > greatest && words[0][i]<= 10)
+            {
+                greatest = words[1][i];
+                r=i;
+                //printf("test 12\n");
+            }
+            i++;
+        }
+
+        printf("%d\n",r+1);
+    }
+    return 0;
+
+}
