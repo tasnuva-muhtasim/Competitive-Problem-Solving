@@ -1,0 +1,46 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int test;
+    scanf("%d",&test);
+    while(test--){
+    int led=0,i=0;
+    char digit[102];
+    scanf("%s",&digit);
+    while(digit[i] != '\0')
+    {
+
+        if(digit[i] == '1')
+        {
+            led = led+2;
+        }
+        else if(digit[i] == '2' || digit[i] == '3' || digit[i] == '5' )
+        {
+            led = led+5;
+        }
+        else if(digit[i] == '6' || digit[i] == '9' || digit[i] == '0')
+        {
+            led = led+6;
+        }
+        else if(digit[i] == '4')
+        {
+            led = led+4;
+        }
+        else if(digit[i] == '7')
+        {
+            led = led+3;
+        }
+        else if(digit[i] == '8')
+        {
+            led = led+7;
+        }
+
+
+        //number = number/10;
+        i= i+1;
+    }
+
+    printf("%d leds\n",led);
+    }
+}
