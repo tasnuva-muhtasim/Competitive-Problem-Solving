@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+
+{
+    int test;
+    scanf("%d",&test);
+    while(test--)
+    {
+        int a[3],i,j,tmp;
+    for(i=0; i<3; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    for(i=0; i<3; i++)
+    {
+        for(j=i+1; j<3; j++)
+        {
+            if(a[j] <a[i])
+            {
+                tmp = a[i];
+                a[i] = a[j];
+                a[j] = tmp;
+            }
+        }
+    }
+
+     if((a[2]+a[1])>=10)
+     {
+         printf("YES\n");
+     }
+    else
+     {
+         printf("NO\n");
+     }
+    }
+
+
+    return 0;
+
+}
