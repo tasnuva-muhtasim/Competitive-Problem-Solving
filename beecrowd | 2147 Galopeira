@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    int test;
+    scanf("%d",&test);
+    while(test--){
+    int num[10],i=0;
+    char digit[10002];
+    scanf("%s",&digit);
+    int l;
+    l = strlen(digit);
+
+    printf("%.02f\n",(l*.01));
+    }
+}
