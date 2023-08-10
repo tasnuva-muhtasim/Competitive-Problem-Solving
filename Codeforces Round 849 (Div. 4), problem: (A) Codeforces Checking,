@@ -1,0 +1,36 @@
+#include<stdio.h>
+int main()
+{
+    int test;
+    scanf("%d",&test);
+    char c[]= "codeforces";
+    while(test--)
+    {
+
+        int i,flag=0;
+        char thechar;
+        //thechar = getchar();
+
+        scanf(" %c",&thechar);
+
+        for(i=0; i<11; i++)
+        {
+            if(c[i]== thechar)
+            {
+               flag=1;
+            }
+
+        }
+        if(flag ==1)
+        {
+            printf("Yes\n");
+        }
+        else
+        {
+            printf("no\n");
+        }
+
+    }
+    return 0;
+
+}
